@@ -1,0 +1,158 @@
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Background */
+html, body {
+  height: 100vh;
+}
+
+html {
+  background: url('../assets/background.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+/* Profile image */
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.image-container img {
+	animation: float 3s ease-in-out infinite;
+	-webkit-animation: float 3s ease-in-out infinite;
+  /* border: 3px solid #f8f8f8;
+  border-radius: 50%; */
+  height: 100%;
+  max-height: 350px;
+  max-width: 350px;
+  width: 100%;
+  opacity: 0.6;
+}
+
+/* Picture animation */
+@keyframes float {
+	0% { transform: translatey(0px); }
+	50% { transform: translatey(-8px); }
+	100% { transform: translatey(0px); }
+}
+
+@-webkit-keyframes float { /* Safari */
+	0% { transform: translatey(0px); }
+	50% { transform: translatey(-8px); }
+	100% { transform: translatey(0px); }
+}
+
+/* Header */
+h1 {
+  color: #f8f8f8;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+/* Social icons */
+.social-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto 10px;
+  max-width: 450px;
+}
+
+.social-item {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  font-size: 40px;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+.icon {
+  font-size: 35px
+}
+
+.icon-image {
+  max-height: 23px;
+}
+
+/* Colors */
+.instagram {
+  background-color: #cd486b;
+}
+.instagram:hover {
+  background-color: #BB244D;
+}
+
+.spotify {
+  background-color: #1DB954;
+}
+.spotify:hover {
+  background-color: #137736;
+}
+
+.soundcloud {
+  background-color: #f73a0e;
+}
+.soundcloud:hover {
+  background-color: #C32702;
+}
+
+/* Hover animations */
+.instagram, .spotify, .soundcloud {
+  transition: all .2s ease-in-out;
+}
+.instagram:hover, .spotify:hover, .soundcloud:hover {
+  transform: scale(1.1);
+}
+
+.spotify-follow {
+  text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    margin-top: 50px;
+  }
+
+  .social-row {
+    margin-bottom: 30px;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
