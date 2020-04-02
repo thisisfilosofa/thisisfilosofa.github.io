@@ -28,6 +28,31 @@ body {
   flex: 1;
 }
 
+/* Loading screen */
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 /* Profile image */
 .image-container {
   display: flex;
@@ -38,8 +63,6 @@ body {
 .image-container img {
 	animation: float 3s ease-in-out infinite;
 	-webkit-animation: float 3s ease-in-out infinite;
-  /* border: 3px solid #f8f8f8;
-  border-radius: 50%; */
   height: 100%;
   max-height: 350px;
   max-width: 350px;
