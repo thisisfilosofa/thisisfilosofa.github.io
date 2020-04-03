@@ -6,28 +6,6 @@
   display: none;
 }
 
-/* Background */
-html, body {
-  height: 100vh;
-}
-
-html {
-  background: url('../assets/background.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.wrapper {
-  flex: 1;
-}
-
 /* Loading screen */
 .center {
   background: #11998e;  /* fallback for old browsers */
@@ -107,6 +85,28 @@ body {
   100% {
     transform: translate(24px, 0);
   }
+}
+
+/* Background */
+html, body {
+  height: 100vh;
+}
+
+html {
+  background: url('../assets/background.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
 }
 
 /* Profile image */
