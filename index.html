@@ -22,19 +22,6 @@
       media="screen"
       href="css/style.css"
     />
-    <script>
-      document.onreadystatechange = function() {
-        if (document.readyState !== "complete") {
-          document.querySelector("body").style.visibility = "hidden";
-          document.querySelector("#loading-bg").style.visibility = "visible";
-          document.querySelector("#loader").style.visibility = "visible";
-        } else {
-          document.querySelector("#loading-bg").style.display = "none";
-          document.querySelector("#loader").style.display = "none";
-          document.querySelector("body").style.visibility = "visible";
-        }
-      };
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162674002-1"></script>
     <script>
