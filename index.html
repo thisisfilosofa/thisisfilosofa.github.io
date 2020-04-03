@@ -17,7 +17,6 @@
       media="screen"
       href="css/style.css"
     />
-    <!-- <link rel="icon" type="image/png" href="assets/favicon.png"> -->
     <link rel="stylesheet" href="https://use.typekit.net/ibi1khx.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -31,7 +30,9 @@
   </script> -->
   </head>
   <body>
-    <div id="loader" class="center"></div>
+    <div id="loading-bg" class="center">
+      <div id="loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
     <div class="container wrapper">
       <div class="image-container">
         <img src="assets/profile.png" alt="Filosofa" />
@@ -60,7 +61,7 @@
           href="https://www.soundcloud.com/thisisfilosofa/"
           target="_blank"
         >
-          <i class="fa fa-soundcloud" aria-hidden="true"></i>
+          <i class="fa fa-soundcloud" aria-hidden="true" style="margin-top: -3px;"></i>
         </a>
       </div>
       <div class="spotify-follow">
@@ -92,8 +93,10 @@
       document.onreadystatechange = function() {
         if (document.readyState !== "complete") {
           document.querySelector("body").style.visibility = "hidden";
+          document.querySelector("#loading-bg").style.visibility = "visible";
           document.querySelector("#loader").style.visibility = "visible";
         } else {
+          document.querySelector("#loading-bg").style.display = "none";
           document.querySelector("#loader").style.display = "none";
           document.querySelector("body").style.visibility = "visible";
         }
